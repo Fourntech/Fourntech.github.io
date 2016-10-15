@@ -6,6 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title> Fourntech </title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    </head>
@@ -13,10 +14,23 @@
       body {
          min-width: 250px;
       }
-      div.polaroid {
+      .polaroid {
          width: 250px;
          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-         text-align: center;
+         margin-top: 25px;
+         margin-bottom: 25px;
+      }
+      .container-fluid {
+         padding-right: 150px;
+         padding-left: 150px;
+      }
+      li {
+         display: inline;
+         padding-right: 15px;
+      }
+      p {
+         margin-top: 15px;
+         margin-bottom: 0px;
       }
    </style>
    <body>
@@ -41,8 +55,8 @@
       </nav>
 
       <header class="jumbotron">
-         <div class="container">
-            <h1><i class="fa fa-phone"></i> Help. Simplify. Enable. </h1>
+         <div class="container-fluid">
+            <h1>Help. Simplify. Enable. </h1>
             <p class="subtitle-text-gray"> Learn more about our goal, our work and our team. </p>
          </div>
       </header>
@@ -51,32 +65,57 @@
          <h3 style="margin-bottom: 50px;">Why do we exist?</h3>
          <p>We started Fourntech with a big dream - to help and enable our customers through our services. We aim to simplify the problems of the users and create solutions through high-quality services. We believe such solution can be created through our unwavering dedication and ever updating, competing skills. We ensure that our customers receive top notch service and support. </p>
       </div>
+
       <hr>
-      <div class="container">
-         <h3 style="margin-bottom: 50px;" class="text-center">Our Team</h3>
+
+      <div class="container-fluid text-center">
+         <h3 class="margin">Our Team</h3><br>
          <div class="row">
-            <div class="col-md-3">
-               <div class="polaroid">
-                  <img src="Images/Arun.jpeg" alt="Arun" style="width:100%" class="img-thumbnail">
-                  <p style="margin-top: 10px;margin-bottom: 10px;">Arun Prasad R</p>
+            <div class="col-sm-6">
+               <div class="polaroid center-block">
+                  <img src="Images/Arun.jpeg" class="img-responsive margin" style="width:100%" alt="Image">
+                  <p>Arun Prasad R</p>
+                  <ul style="list-style: none;padding-left: 0px;padding-bottom: 10px;"> 
+                     <li><a href="https://in.linkedin.com/in/arun-prasad-r-46619b75" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                     <li><a href="https://github.com/arunprasadr1989" target="_blank"><i class="fa fa-github"></i></a></li>
+                  </ul>
                </div>
             </div>
-            <div class="col-md-3">
-               <div class="polaroid">
-                  <img src="Images/Manjunath.jpg" alt="Manjunath" style="width:100%" class="img-thumbnail">
-                  <p style="margin-top: 10px;margin-bottom: 10px;">Manjunath Mohan</p>
+            <div class="col-sm-6">
+               <div class="polaroid center-block">
+                  <img src="Images/Manjunath.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+                  <p>Manjunath Mohan</p>
+                  <ul style="list-style: none;padding-left: 0px;padding-bottom: 10px;"> 
+                     <li><a href="https://in.linkedin.com/in/manjunath-n-m-56860544" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                     <li><a href="https://github.com/nmmanjunath90" target="_blank"><i class="fa fa-github"></i></a></li>
+                  </ul>
                </div>
             </div>
-            <div class="col-md-3">
-               <div class="polaroid">
-                  <img src="Images/Ponneeswaran.jpg" alt="Ponneeswaran" style="width:100%" class="img-thumbnail">
-                  <p style="margin-top: 10px;margin-bottom: 10px;">Ponneeswaran Natarajan</p>
+         </div>
+         <div class="row">
+            <div class="col-sm-6">
+               <div class="polaroid center-block">
+                  <img src="Images/Ponneeswaran.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+                  <p>Ponneeswaran Natarajan</p>
+                  <ul style="list-style: none;padding-left: 0px;padding-bottom: 10px;"> 
+                     <li><a href="https://twitter.com/Ponneeswaran" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                     <li><a href="https://www.linkedin.com/in/ponneeswaran-natarajan-253920105" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                     <li><a href="https://github.com/ponneeswaran" target="_blank"><i class="fa fa-github"></i></a></li>
+                  </ul>
                </div>
             </div>
-            <div class="col-md-3">
-               
+            <div class="col-sm-6">
+               <div class="polaroid center-block">
+                  <img src="Images/Praveen.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+                  <p>Praveen Prabhakar</p>
+                  <ul style="list-style: none;padding-left: 0px;padding-bottom: 10px;"> 
+                     <li><a href="https://www.linkedin.com/in/ppraveentr" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                     <li><a href="https://github.com/ppraveentr" target="_blank"><i class="fa fa-github"></i></a></li>
+                  </ul>
+               </div>
             </div>
          </div>
       </div>
+
    </body>
 </html>
