@@ -1,0 +1,25 @@
+.HomePage-Heading {
+    margin-bottom: 30px;
+}
+
+.Container-Center {
+    place-content: center;
+    text-align: center;
+}
+
+.polaroid {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+p {
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+.footer {
+    background-color: #2f2f2f;
+    color: #fff;
+    height: 150px;
+    flex-shrink: 0;
+    text-align: center;
+}
