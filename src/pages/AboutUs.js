@@ -1,24 +1,29 @@
 import React from 'react';
 
+import arunImg from './Images/About/Arun.jpeg'
+import praveenImg from './Images/About/Praveen.jpg'
+import ponneesImg from './Images/About/Ponneeswaran.jpg'
+import manjunathImg from './Images/About/Manjunath.jpg'
+
 import { Jumbotron, Container } from 'react-bootstrap';
 import { CardDeck, Card } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import arunImg from './Images/About/Arun.jpeg'
 
 const AboutUs = () => <div>
-    <Jumbotron fluid>
+    <Jumbotron>
         <Container>
             <h1>Help. Simplify. Enable.</h1>
-            <p>Learn more about our goal, our work and our team.</p>
+            <p className="subtitle-text-gray">Learn more about our goal, our work and our team.</p>
         </Container>
     </Jumbotron>
     <Container>
-        <div class="text-center">
+        <div className="text-center">
             <h3 className="HomePage-Heading">Why do we exist?</h3>
             <p>{ OutGoal } </p>
         </div>
     </Container>
+    <hr />
     <MemberCardTable />
 </div>;
 
@@ -27,41 +32,45 @@ class MemberCardTable extends React.Component {
         function MemberCard(props) {
             const member = props.member
             return (
-                <Card className="col-md-3" border="light" style={{ width: '12rem' }}>
-                    <Card.Img variant="top" src={member.img} />
+                <Card className="col-md-3 text-center" border="light">
+                    <Card.Img className="polaroid" variant="top" src={member.img} />
                     <Card.Body>
-                        <Card.Subtitle><p>{member.name}</p></Card.Subtitle>
+                        <Card.Subtitle>{member.name}</Card.Subtitle>
+                    </Card.Body>
+                    <Card.Footer>
                         {
                             member.twitter ? <Card.Link href={member.twitter}><FontAwesomeIcon icon={faTwitter}/></Card.Link> : ''
                         }
-                        <Card.Link href={member.github}><FontAwesomeIcon icon={faGithub}/></Card.Link>
-                        <Card.Link href={member.linkedin}><FontAwesomeIcon icon={faLinkedin}/></Card.Link>
-                    </Card.Body>
+                        {
+                            member.github ? <Card.Link href={member.github}><FontAwesomeIcon icon={faGithub}/></Card.Link> : ''
+                        }
+                        {
+                            member.linkedin ? <Card.Link href={member.linkedin}><FontAwesomeIcon icon={faLinkedin}/></Card.Link> : ''
+                        }
+                    </Card.Footer>
                 </Card>
             );
         }
 
         const cards = [];
-        TeamMembers.forEach((member) => {
+        TeamMembers.flatMap((member, index)=> {
             cards.push(
-                <MemberCard member={member} />
+                <MemberCard member={member} key={member.name}/>
             );
         });
 
         return (
-            <Container>
-                <br/>   <br/>
-                <Card.Header className="text-center">Our Team</Card.Header>
-                <br/>
-                <CardDeck>
+            <Container className="card-padding">
+                <h3 className="text-center">Our Team</h3>
+                <CardDeck className="card-padding">
                     {cards}
                 </CardDeck>
-                <br/>
             </Container>
         );
     }
 }
 
+// Const
 const TeamMembers = [
     {category: 'Admin', name: 'Arun Prasad Raghavendran',
         img: arunImg,
@@ -69,16 +78,16 @@ const TeamMembers = [
         linkedin: "https://www.linkedin.com/in/rarunprasad1989",
         github: 'https://github.com/rarunprasad1989'},
     {category: 'Admin', name: 'Manjunath Mohan',
-        img: "./Images/About/Manjunath.jpg",
+        img: manjunathImg,
         linkedin: "https://in.linkedin.com/in/manjunath-n-m-56860544",
         github: 'https://github.com/nmmanjunath90'},
     {category: 'Admin', name: 'Ponneeswaran Natarajan',
-        img: "./Images/About/Ponneeswaran.jpg",
+        img: ponneesImg,
         twitter: "https://twitter.com/Ponneeswaran",
         linkedin: "https://www.linkedin.com/in/ponneeswaran-natarajan-253920105",
         github: 'https://github.com/ponneeswaran'},
     {category: 'Admin', name: 'Praveen Prabhakar',
-        img: "./Images/About/Praveen.jpg",
+        img: praveenImg,
         linkedin: "https://www.linkedin.com/in/ppraveentr",
         github: 'https://github.com/ppraveentr'},
 ];
