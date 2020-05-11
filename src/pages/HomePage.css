@@ -2,18 +2,13 @@
     margin-bottom: 30px;
 }
 
-.Container-Center {
-    place-content: center;
-    text-align: center;
+.card-padding {
+    margin-top: 25px;
+    margin-bottom: 50px;
 }
 
 .polaroid {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-p {
-    margin-top: 15px;
-    margin-bottom: 0px;
 }
 
 .footer {
