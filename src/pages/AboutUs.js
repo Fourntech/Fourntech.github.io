@@ -4,6 +4,7 @@ import { Jumbotron, Container } from 'react-bootstrap';
 import { CardDeck, Card } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import arunImg from './Images/About/Arun.jpeg'
 
 const AboutUs = () => <div>
     <Jumbotron fluid>
@@ -30,7 +31,9 @@ class MemberCardTable extends React.Component {
                     <Card.Img variant="top" src={member.img} />
                     <Card.Body>
                         <Card.Subtitle><p>{member.name}</p></Card.Subtitle>
-                        <Card.Link href={member.twitter}><FontAwesomeIcon icon={faTwitter}/></Card.Link>
+                        {
+                            member.twitter ? <Card.Link href={member.twitter}><FontAwesomeIcon icon={faTwitter}/></Card.Link> : ''
+                        }
                         <Card.Link href={member.github}><FontAwesomeIcon icon={faGithub}/></Card.Link>
                         <Card.Link href={member.linkedin}><FontAwesomeIcon icon={faLinkedin}/></Card.Link>
                     </Card.Body>
@@ -61,7 +64,8 @@ class MemberCardTable extends React.Component {
 
 const TeamMembers = [
     {category: 'Admin', name: 'Arun Prasad Raghavendran',
-        img: "./Images/About/Arun.jpeg",
+        img: arunImg,
+        twitter: "https://twitter.com/rarunprasad89",
         linkedin: "https://www.linkedin.com/in/rarunprasad1989",
         github: 'https://github.com/rarunprasad1989'},
     {category: 'Admin', name: 'Manjunath Mohan',
