@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React  from 'react';
 
 import './App.css';
 
@@ -6,7 +6,7 @@ import Navigation from "./pages/Navigation";
 import AboutUs from "./pages/AboutUs"
 import Footer from "./pages/Footer"
 
-class App extends Component {
+class App extends React.Component {
     render() {
         return (
             <div>
