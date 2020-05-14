@@ -1,5 +1,4 @@
 import React from 'react';
-
 import OurTeamMembers from "../components/OurTeamMembers";
 import { Jumbotron, Container } from 'react-bootstrap';
 
