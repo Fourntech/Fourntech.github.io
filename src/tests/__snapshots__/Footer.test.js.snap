@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot Footer 1`] = `
+<footer
+  className="text-center footer"
+>
+  <Container
+    fluid={false}
+  >
+    <br />
+    <p>
+      This website is under construction.
+    </p>
+  </Container>
+</footer>
+`;

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot App 1`] = `
+<div>
+  <Navigation />
+   
+  <AboutUsPage />
+   
+  <Footer />
+</div>
+`;

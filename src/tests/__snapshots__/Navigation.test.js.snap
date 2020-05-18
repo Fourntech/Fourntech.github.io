@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot Navigation 1`] = `
+<Navbar
+  bg="light"
+  collapseOnSelect={false}
+  expand="lg"
+  variant="light"
+>
+  <NavbarBrand
+    href="#home"
+  >
+    Fourntech
+  </NavbarBrand>
+  <NavbarToggle
+    aria-controls="basic-navbar-nav"
+    label="Toggle navigation"
+  />
+  <NavbarCollapse
+    id="basic-navbar-nav"
+  >
+    <Nav
+      className="mr-auto"
+      fill={false}
+      justify={false}
+    >
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        disabled={false}
+        href="#home"
+      >
+        Home
+      </NavLink>
+      <NavLink
+        as={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "SafeAnchor",
+            "render": [Function],
+          }
+        }
+        disabled={false}
+        href="#link"
+      >
+        Link
+      </NavLink>
+    </Nav>
+  </NavbarCollapse>
+</Navbar>
+`;
